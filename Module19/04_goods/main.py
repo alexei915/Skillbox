@@ -24,4 +24,12 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+amount_dict = dict()
+
+for i_goods in goods:
+    amount_dict[i_goods] = 0
+    amount_dict['Стоимость'] = 0
+    for i_store in store[goods[i_goods]]:
+        amount_dict[i_goods] += i_store['quantity']
+        amount_dict['Стоимость'] += i_store['quantity'] * i_store['price']
+    print('{0} - {1} шт, стоимость - {2} руб'.format(i_goods, amount_dict[i_goods], amount_dict['Стоимость']))
