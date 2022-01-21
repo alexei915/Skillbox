@@ -1,3 +1,12 @@
+def get_values(data):
+    interests = []
+    count = 0
+    for i_value in data.values():
+        interests.extend(i_value['interests'])
+        count += len(i_value['surname'])
+    return interests, count
+
+
 students = {
     1: {
         'name': 'Bob',
@@ -20,25 +29,16 @@ students = {
 }
 
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
-
-
 pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
+for i_code, i_age in students.items():
+    x = (i_code, i_age['age'])
+    pairs.append(x)
 
 
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
+interests_list = get_values(students)[0]
+total_length = get_values(students)[1]
 
-# TODO исправить код
+print(f'Список пар "ID студента - Возраст": {pairs}')
+print(f'Полный список интересов всех студентов: {interests_list}')
+print(f'Общая длина всех фамилий студентов: {total_length}')
+
