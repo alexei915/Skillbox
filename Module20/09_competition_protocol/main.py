@@ -31,3 +31,5 @@ for i_player, i_scores in sort(protocol).items():
     i_top += 1
     if i_top == 4:
         break
+
+# TODO рекомендации данные ранее применить

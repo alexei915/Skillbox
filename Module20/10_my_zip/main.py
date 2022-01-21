@@ -15,3 +15,5 @@ for x in my_zip(string, tpl):
     print(x)
 
 
+# TODO рекомендации данные ранее применить
+

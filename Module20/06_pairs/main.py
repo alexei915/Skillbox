@@ -12,3 +12,4 @@ numbers = [random.randint(0, 100) for _ in range(10)]
 
 new_numbers = [tuple(numbers[(i * len(numbers) // 5):((i * len(numbers) // 5) + 2)]) for i in range(5)]
 print(new_numbers)
+

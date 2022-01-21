@@ -17,3 +17,5 @@ for i_name, i_age in family.items():
     x = i_name[0].lower()
     if surname in x:
         print(i_name[0], i_name[1], i_age)
+
+# TODO применить рекомендации данные ранее
