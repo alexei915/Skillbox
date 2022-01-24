@@ -6,7 +6,7 @@ players = {
 
 new_sql = []
 for i_player, i_score in players.items():
-    x = i_player[0], i_player[1], i_score[0], i_score[1], i_score[2]
-    new_sql.append(x)
+    players_points = i_player[0], i_player[1], i_score[0], i_score[1], i_score[2]
+    new_sql.append(players_points)
 
 print(new_sql)

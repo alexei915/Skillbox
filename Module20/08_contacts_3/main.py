@@ -13,10 +13,10 @@ def add_contact():
 
 def search_contact():
     surname = input('Введите фамилию для поиска: ').lower()
-    for i_name, i_age in phonebook_dict.items():
-        x = i_name[1].lower()
-        if surname in x:
-            print(i_name[0], i_name[1], i_age)
+    for name, age in phonebook_dict.items():
+        last_name = name[1].lower()
+        if surname in last_name:
+            print(name[0], name[1], age)
         else:
             print('Контакт не найден.')
     return phonebook_dict
