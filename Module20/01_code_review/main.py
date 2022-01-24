@@ -1,9 +1,9 @@
 def get_values(data):
     interests = []
     count = 0
-    for i_value in data.values():
-        interests.extend(i_value['interests'])
-        count += len(i_value['surname'])
+    for value in data.values():
+        interests.extend(value['interests'])
+        count += len(value['surname'])
     return interests, count
 
 
@@ -29,18 +29,16 @@ students = {
 }
 
 
-pairs = []
-# TODO рекомендую отказаться от именования с прификсом i_ не несет никакой го смысловой нагрузки
-for i_code, i_age in students.items():
-    # TODO отднобуквенных переменных в коде быть не должно от слова совсем
-    x = (i_code, i_age['age'])
-    pairs.append(x)
+pairs_list = []
+for code, age in students.items():
+    pairs = (code, age['age'])
+    pairs_list.append(pairs)
 
 
 interests_list = get_values(students)[0]
 total_length = get_values(students)[1]
 
-print(f'Список пар "ID студента - Возраст": {pairs}')
+print(f'Список пар "ID студента - Возраст": {pairs_list}')
 print(f'Полный список интересов всех студентов: {interests_list}')
 print(f'Общая длина всех фамилий студентов: {total_length}')
 

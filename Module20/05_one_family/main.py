@@ -13,9 +13,7 @@ family = {
 surname = input('Введите фамилию: ').lower()
 
 
-for i_name, i_age in family.items():
-    x = i_name[0].lower()
-    if surname in x:
-        print(i_name[0], i_name[1], i_age)
-
-# TODO применить рекомендации данные ранее
+for name, age in family.items():
+    last_name = name[0].lower()
+    if surname in last_name:
+        print(name[0], name[1], age)

@@ -3,17 +3,15 @@ def my_zip(type_1, type_2):
         amount_len = len(type_2)
     else:
         amount_len = len(type_1)
-    gen = ((type_1[i], type_2[i]) for i in range(amount_len))
+    gen = ((type_1[num], type_2[num]) for num in range(amount_len))
     return gen
 
 
-string = [2, 9, 18, 28]
-tpl = ["Дима", "Марина", "Андрей", "Никита"]
+seq = [2, 9, 18, 28]
+names = ["Дима", "Марина", "Андрей", "Никита"]
 
-print(my_zip(string, tpl))
-for x in my_zip(string, tpl):
-    print(x)
+my_function = my_zip(seq, names)
 
-
-# TODO рекомендации данные ранее применить
-
+print(my_function)
+for element in my_function:
+    print(element)
