@@ -15,3 +15,5 @@ my_function = my_zip(seq, names)
 print(my_function)
 for element in my_function:
     print(element)
+
+# TODO нейминг в питоне пишем развернуто сокращений быть не должно

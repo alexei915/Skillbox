@@ -31,3 +31,5 @@ for player, scores in sort(protocol).items():
     top += 1
     if top == 4:
         break
+
+# TODO list set dict tuple в именовании переменных не используем

@@ -42,3 +42,4 @@ print(f'Список пар "ID студента - Возраст": {pairs_list}
 print(f'Полный список интересов всех студентов: {interests_list}')
 print(f'Общая длина всех фамилий студентов: {total_length}')
 
+# TODO list set dict tuple в именовании переменных не указываем
