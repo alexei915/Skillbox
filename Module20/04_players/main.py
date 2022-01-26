@@ -5,8 +5,8 @@ players = {
 }
 
 new_sql = []
-for i_player, i_score in players.items():
-    players_points = i_player[0], i_player[1], i_score[0], i_score[1], i_score[2]
+for player, score in players.items():
+    players_points = player[0], player[1], score[0], score[1], score[2]
     new_sql.append(players_points)
 
 print(new_sql)

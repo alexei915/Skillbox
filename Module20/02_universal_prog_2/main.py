@@ -8,10 +8,8 @@ def is_prime(index):
 
 
 def crypto(data):
-    return [value for num, value in enumerate(data) if is_prime(num)]
+    return [value for number, value in enumerate(data) if is_prime(number)]
 
 
 my_function = crypto([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 print(my_function)
-
-# TODO num это сокращение
