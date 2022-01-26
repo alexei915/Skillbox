@@ -1,13 +1,13 @@
-def sort(entries_list):
-    for minimum in range(len(entries_list)):
-        for curr in range(minimum, len(entries_list)):
-            if int(entries_list[curr][0]) > int(entries_list[minimum][0]):
-                entries_list[curr], entries_list[minimum] = entries_list[minimum], entries_list[curr]
-    protocol_dict = dict()
-    for pairs in entries_list:
-        if not pairs[1] in protocol_dict:
-            protocol_dict[pairs[1]] = pairs[0]
-    return protocol_dict
+def sort(entries):
+    for minimum in range(len(entries)):
+        for current in range(minimum, len(entries)):
+            if int(entries[current][0]) > int(entries[minimum][0]):
+                entries[current], entries[minimum] = entries[minimum], entries[current]
+    competition_protocol = dict()
+    for pairs in entries:
+        if not pairs[1] in competition_protocol:
+            competition_protocol[pairs[1]] = pairs[0]
+    return competition_protocol
 
 
 entries_count = int(input('Сколько записей вносится в протокол? '))
@@ -19,8 +19,8 @@ while entries_count < 3:
 protocol = []
 print('Записи (результат и имя):')
 for number in range(entries_count):
-    entries = input(f'{number + 1} запись: ').split()
-    players_points = entries[0], entries[1]
+    entry = input(f'{number + 1} запись: ').split()
+    players_points = entry[0], entry[1]
     protocol.append(players_points)
 
 
@@ -31,5 +31,3 @@ for player, scores in sort(protocol).items():
     top += 1
     if top == 4:
         break
-
-# TODO list set dict tuple в именовании переменных не используем

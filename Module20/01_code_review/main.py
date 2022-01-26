@@ -29,17 +29,17 @@ students = {
 }
 
 
-pairs_list = []
+pairs_id_age = []
 for code, age in students.items():
     pairs = (code, age['age'])
-    pairs_list.append(pairs)
+    pairs_id_age.append(pairs)
 
 
-interests_list = get_values(students)[0]
+students_interests = get_values(students)[0]
 total_length = get_values(students)[1]
 
-print(f'Список пар "ID студента - Возраст": {pairs_list}')
-print(f'Полный список интересов всех студентов: {interests_list}')
+print(f'Список пар "ID студента - Возраст": {pairs_id_age}')
+print(f'Полный список интересов всех студентов: {students_interests}')
 print(f'Общая длина всех фамилий студентов: {total_length}')
 
-# TODO list set dict tuple в именовании переменных не указываем
+

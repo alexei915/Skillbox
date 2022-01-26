@@ -1,4 +1,4 @@
-def sort_num(seq):
+def sort_number(seq):
     seq = list(seq)
     for number in seq:
         if not isinstance(number, int):
@@ -10,5 +10,5 @@ def sort_num(seq):
     return tuple(seq)
 
 
-my_sort = sort_num((6, 3, -1, 8, 4, 10, -5))
+my_sort = sort_number((6, 3, -1, 8, 4, 10, -5))
 print(my_sort)
