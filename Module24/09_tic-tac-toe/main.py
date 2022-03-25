@@ -61,7 +61,7 @@ class Player:
 
 my_board = Board()
 player_1 = Player('Alex', 'cross', my_board)
-player_2 = Player('Nikita', 'zero', my_board)
+player_2 = Player('Nasya', 'zero', my_board)
 
 my_board.print_board()
 while True:
